@@ -174,10 +174,12 @@ def health():
 
 if __name__ == "__main__":
     print("\n" + "="*50)
-    print("  Sepsis AI Backend running on http://localhost:5000")
+    print("  Sepsis AI Backend running...")
     print("  Endpoints:")
     print("    GET  /api/patients  → live feed (all patients)")
     print("    POST /api/predict   → single patient prediction")
     print("    GET  /api/health    → health check")
     print("="*50 + "\n")
-    app.run(debug=True, port=5000)
+    # ✅ FIXED: Reads PORT from environment (required for Render)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
