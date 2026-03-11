@@ -1,3 +1,6 @@
+## Live Demo
+https://huggingface.co/spaces/Hema200510/sepsis-icu-monitor
+
 # Sepsis AI Monitor
 
 AI-powered ICU sepsis detection system using your trained LightGBM model.
