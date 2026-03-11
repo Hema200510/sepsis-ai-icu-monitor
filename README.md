@@ -149,3 +149,4 @@ def get_all_patients():
 - Python 3.8+
 - Node.js 18+
 - npm 9+
+"# deploy"  
